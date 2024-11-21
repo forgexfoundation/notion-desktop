@@ -4,13 +4,14 @@ Notion Desktop is a cross-platform desktop application that allows you to use No
 
 ![Image](https://github.com/xanmoy/notion-desktop/blob/main/screenshots/banner.png)
 
-## 🛠 **Features**  
-- **Full Notion Functionality**: Access all Notion features in a dedicated desktop app.  
-- **Single Instance**: Ensures only one instance of the app runs at a time.  
-- **Custom User-Agent**: Enhanced compatibility with Notion Web.  
-- **Window Management**: Automatically maximizes on startup for better visibility.  
-- **Google Sign-In Support**: Login via Google is supported with external browser fallback for security.  
-- **Popup Handling**: Popups are allowed to ensure smooth navigation and interactions.  
+## 🛠 **Features**
+
+- **Full Notion Functionality**: Access all Notion features in a dedicated desktop app.
+- **Single Instance**: Ensures only one instance of the app runs at a time.
+- **Custom User-Agent**: Enhanced compatibility with Notion Web.
+- **Window Management**: Automatically maximizes on startup for better visibility.
+- **Google Sign-In Support**: Login via Google is supported with external browser fallback for security.
+- **Popup Handling**: Popups are allowed to ensure smooth navigation and interactions.
 
 ---
 
@@ -69,20 +70,21 @@ Remove the Snap package: To uninstall the Notion Desktop application, run the fo
 sudo snap remove Notion-desktop
 ```
 
-## 📖 **Usage Instructions**  
+## 📖 **Usage Instructions**
 
-### **Launching the App**:  
-   After installation, open Notion Desktop using:  
-   ```bash
+### **Launching the App**:
+
+   After installation, open Notion Desktop using:
+
+```bash
    notion-desktop
-   ```
+```
 
 ## 🤝 **Contributing**
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
-
-## 📜 **License** 
+## 📜 **License**
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
