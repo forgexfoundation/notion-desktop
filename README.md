@@ -22,12 +22,12 @@ Notion Desktop is a cross-platform desktop application that allows you to use No
 sudo snap install Notion-desktop
 ```
 
-## Build From Source
+### Build From Source
 
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/xanmoy/Notion-desktop.git
+git clone https://github.com/xanmoy/notion-desktop.git
 cd Notion-desktop
 ```
 
@@ -61,7 +61,7 @@ cd dist
 sudo snap install --dangerous ./Notion-desktop_1.0.3_amd64.snap 
 ```
 
-## Uninstallation Steps
+## ↩️ **Uninstallation Steps**
 
 Remove the Snap package: To uninstall the Notion Desktop application, run the following command:
 
@@ -69,26 +69,24 @@ Remove the Snap package: To uninstall the Notion Desktop application, run the fo
 sudo snap remove Notion-desktop
 ```
 
-## Usage
+## 📖 **Usage Instructions**  
 
-Once installed, launch the application and log in with your Notion account by scanning the QR code displayed on the screen with your phone.
+### **Launching the App**:  
+   After installation, open Notion Desktop using:  
+   ```bash
+   notion-desktop
+   ```
 
-## Contributing
+### 🤝 **Contributing**
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
-### Fork the project.
 
-Create your feature branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/YourFeature).
-Open a pull request.
-
-## License
+### 📜 **License** 
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
-## Acknowledgments
+### Acknowledgments
 
-Electron - Framework used to build the application.
-Notion - A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.
+- **Electron** - Framework used to build the application.
+- **Notion** - A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.
