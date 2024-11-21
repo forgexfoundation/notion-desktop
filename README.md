@@ -2,7 +2,7 @@
 
 Notion Desktop is a cross-platform desktop application that allows you to use Notion directly on your computer, making it easier to chat with friends and family while working.
 
-![Image](https://raw.githubusercontent.com/xanmoy/notion-desktop/refs/heads/main/screenshots/banner.png)
+![Image](https://github.com/xanmoy/notion-desktop/blob/main/screenshots/banner.png)
 
 ## Features
 
