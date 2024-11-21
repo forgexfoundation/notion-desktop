@@ -77,16 +77,16 @@ sudo snap remove Notion-desktop
    notion-desktop
    ```
 
-### 🤝 **Contributing**
+## 🤝 **Contributing**
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
 
-### 📜 **License** 
+## 📜 **License** 
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
-### Acknowledgments
+## Acknowledgments
 
 - **Electron** - Framework used to build the application.
 - **Notion** - A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.
