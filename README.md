@@ -4,39 +4,25 @@ Notion Desktop is a cross-platform desktop application that allows you to use No
 
 ![Image](https://github.com/xanmoy/notion-desktop/blob/main/screenshots/banner.png)
 
-## Features
+## 🛠 **Features**  
+- **Full Notion Functionality**: Access all Notion features in a dedicated desktop app.  
+- **Single Instance**: Ensures only one instance of the app runs at a time.  
+- **Custom User-Agent**: Enhanced compatibility with Notion Web.  
+- **Window Management**: Automatically maximizes on startup for better visibility.  
+- **Google Sign-In Support**: Login via Google is supported with external browser fallback for security.  
+- **Popup Handling**: Popups are allowed to ensure smooth navigation and interactions.  
 
-- **Multi-platform**: Runs on Linux, Windows, and macOS.
-- **Real-time messaging**: Stay connected with your contacts through instant messaging.
-- **Media sharing**: Easily share images, videos, and documents.
-- **Notifications**: Get desktop notifications for new messages.
+---
 
 ![Image](https://github.com/xanmoy/notion-desktop/blob/main/screenshots/image1.png)
 
-## Installation
-
-### Simple Installation
+## 📦 **Installation**
 
 ```bash
 sudo snap install Notion-desktop
 ```
 
-Or,
-
-1. **Download the Tar File**: If you haven't already, make sure you have the Tar file Notion-desktop_1.0.0_amd64.tar in your current directory.
-2. **Run the Extraction Command**:
-
-```bash
-tar -xzvf Notion-desktop_1.0.0_amd64.tar
-```
-
-3. **Run the Installation Script**: Open a terminal and navigate to the directory where the Notion-desktop_1.0.0_amd64 is located. Then, execute the installation script:
-
-```bash
-sudo sh ./install.sh
-```
-
-### Build From Source
+## Build From Source
 
 1. **Clone the repository**:
 
