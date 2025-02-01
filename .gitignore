@@ -4,7 +4,7 @@ node_modules/
 # Build output
 dist/
 build/
-whatsapp-desktop.AppDir/
+notion-desktop.AppDir/
 
 # Log files
 *.log
