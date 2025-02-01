@@ -1,6 +1,6 @@
 {
   "name": "notion-desktop",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "src/main.js",
   "type": "module",
   "scripts": {
@@ -8,24 +8,24 @@
     "dist": "electron-builder --linux snap"
   },
   "build": {
-    "appId": "com.example.whatsappdesktopclient",
+    "appId": "com.example.notiondesktopclient",
     "linux": {
       "target": "snap",
       "icon": "assets/icon.png",
       "category": "Utility"
     }
   },
-  "repository": "https://github.com/xanmoy/whatsapp-desktop-clientwhatsapp-desktop-client.git",
+  "repository": "https://github.com/xanmoy/notion-desktop.git",
   "keywords": [
     "Electron",
-    "WhatsApp",
-    "whatsappdesktop",
+    "Notion",
+    "notiondesktop",
     "Linux",
     "desktopApplication"
   ],
   "author": "Tanmoy Ganguly",
   "license": "ISC",
-  "description": "A simple and efficient desktop client for WhatsApp.",
+  "description": "A simple and efficient desktop client for Notion.",
   "devDependencies": {
     "electron": "^33.2.0",
     "electron-builder": "^25.1.8"
