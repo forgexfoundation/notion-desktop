@@ -20,7 +20,7 @@ Notion Desktop is a cross-platform desktop application that allows you to use No
 ## 📦 **Installation**
 
 ```bash
-sudo snap install Notion-desktop
+sudo snap install notion-desktop
 ```
 
 ### Build From Source
