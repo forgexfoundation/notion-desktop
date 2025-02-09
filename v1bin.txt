@@ -1,9 +1,8 @@
-import { app, BrowserWindow, shell, screen } from 'electron';
+import { app, BrowserWindow, shell } from 'electron';
 import path from 'path';
 import { config } from './config/index.js';
 import { fileURLToPath } from 'url';
 import electronContextMenu from 'electron-context-menu';
-import fs from 'fs';
 
 // Set up the context menu
 electronContextMenu({
@@ -11,32 +10,17 @@ electronContextMenu({
 });
 
 const appUrl = 'https://www.notion.so/login';
-const stateFile = path.join(app.getPath('userData'), 'window-state.json');
 
 let window = null;
 
-// Function to get the last saved window state
-function getWindowState() {
-    try {
-        const data = fs.readFileSync(stateFile, 'utf8');
-        const state = JSON.parse(data);
-        const displays = screen.getAllDisplays();
-
-        // Ensure the window is within a valid screen
-        const isOnValidScreen = displays.some(display => {
-            const { x, y, width, height } = display.bounds;
-            return (
-                state.x >= x &&
-                state.y >= y &&
-                state.x + state.width <= x + width &&
-                state.y + state.height <= y + height
-            );
-        });
-
-        return isOnValidScreen ? state : { width: 1280, height: 800 };
-    } catch (error) {
-        return { width: 1280, height: 800 }; // Default size if no state found
+function onNewWindow(details) {
+    // Open URL directly in the default system browser for Google Sign-In popups
+    if (details.url.includes('accounts.google.com')) {
+        shell.openExternal(details.url); // Open Google Sign-In popup in the system browser
+        return { action: 'deny' };
     }
+
+    return { action: 'allow' }; // Allow other popups
 }
 
 // Calculate __dirname for ES modules
@@ -44,12 +28,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Function to create the main application window
 const createWindow = () => {
-    const state = getWindowState();
     window = new BrowserWindow({
-        x: state.x,
-        y: state.y,
-        width: state.width,
-        height: state.height,
         icon: path.join(__dirname, 'assets/icon.png'),
         autoHideMenuBar: true,
         webPreferences: {
@@ -67,21 +46,16 @@ const createWindow = () => {
     });
 
     window.webContents.setWindowOpenHandler((details) => {
-        return details.url.includes('accounts.google.com')
-            ? (shell.openExternal(details.url), { action: 'deny' }) // Open Google sign-in popups in system browser
-            : { action: 'allow' }; // Allow other popups
+        return {
+            action: 'allow', // Allow popups by default
+        };
     });
 
     window.once('ready-to-show', () => {
-        window.show();
-    });
-
-    // Save window state before closing
-    window.on('close', () => {
-        const bounds = window.getBounds();
-        fs.writeFileSync(stateFile, JSON.stringify(bounds, null, 2));
+        window.maximize();
     });
 };
+
 
 // Single instance lock
 const appLock = app.requestSingleInstanceLock();
@@ -99,7 +73,7 @@ if (!appLock) {
         }
     });
 
-    app.whenReady().then(createWindow);
+    app.on('ready', createWindow);
 
     app.on('window-all-closed', () => {
         if (process.platform !== 'darwin') {
