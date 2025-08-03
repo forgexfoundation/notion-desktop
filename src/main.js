@@ -56,7 +56,6 @@ const createWindow = () => {
             nodeIntegration: false,
             contextIsolation: true,
             nativeWindowOpen: true, // Enables proper popup handling
-            preload: path.join(__dirname, 'preload.js'),
             webSecurity: true,
         },
     });
@@ -78,7 +77,7 @@ const createWindow = () => {
 
     // Save window state before closing
     window.on('close', () => {
-        const bounds = window.getBounds();
+            const bounds = window.getBounds();
         fs.writeFileSync(stateFile, JSON.stringify(bounds, null, 2));
     });
 };
