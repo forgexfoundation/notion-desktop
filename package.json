@@ -1,16 +1,18 @@
 {
   "name": "notion-desktop",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "src/main.js",
   "type": "module",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux snap"
+    "dist:all": "electron-builder --linux snap AppImage",
+    "dist:snap": "electron-builder --linux snap",
+    "dist:appimage": "electron-builder --linux AppImage"
   },
   "build": {
     "appId": "com.example.notiondesktopclient",
     "linux": {
-      "target": "snap",
+      "target": ["snap", "AppImage"],
       "icon": "assets/icon.png",
       "category": "Utility"
     }
